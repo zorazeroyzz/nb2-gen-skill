@@ -1,0 +1,37 @@
+{
+  "name": "nb2-gen",
+  "description": "Nano Banana 2 图片生成/编辑 Skill。基于 AJI AI API 调用 Gemini 3.1 Flash Image 模型，支持二次元转真人、图片编辑、多图合成。",
+  "version": "1.0.0",
+  "author": "zorazeroyzz",
+  "homepage": "https://ai.ajiai.top",
+  "license": "MIT",
+  "requirements": {
+    "python": ">=3.8",
+    "packages": ["requests"]
+  },
+  "scripts": {
+    "generate": "scripts/generate.py",
+    "edit": "scripts/edit.py",
+    "compose": "scripts/compose.py",
+    "chat": "scripts/chat.py"
+  },
+  "config": {
+    "env": {
+      "NB2_API_KEY": {
+        "description": "AJI AI API Key (必填)",
+        "default": "",
+        "required": true
+      },
+      "NB2_API_URL": {
+        "description": "API 地址",
+        "default": "https://ai.ajiai.top/v1/chat/completions",
+        "required": false
+      },
+      "NB2_MODEL": {
+        "description": "模型名",
+        "default": "AJbanana3-4k",
+        "required": false
+      }
+    }
+  }
+}
